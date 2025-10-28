@@ -16,6 +16,9 @@
     font-size: 12px;  
   }
 
+  body { 
+    overflow-x: hidden;
+  }
 
 
   h2 { 
@@ -25,15 +28,6 @@
   h3 {
     font-size: 1.5rem;
   }
-
-
-  .page {
-    height: 300vh;
-    background: radial-gradient(circle at center, #e8e8e8 0%, #959595 100%);
-    color: #e3e3e3;
-    font-family: 'digital', sans-serif;
-    overflow-x: hidden;
-  } 
 
   .logo { 
     all: unset;
@@ -48,7 +42,6 @@
 
 
   .intro {
-    position: sticky;
     top: 0;
     height: 100vh;
     display: flex;
@@ -62,18 +55,23 @@
     text-transform: uppercase;
     display: flex;
     gap: 0.1em;
+    width: 90vw;
+    height: fit-content;
+    overflow-y: hidden;
   }
 
   .titleAnimation span {
-    font-size: 30px;
+    font-family: 'digital';
+    font-size: 50px;
     opacity: 0;
     transform: translateY(80px);
     filter: blur(10px);
     color: #979797;
+    display: inline;
   }
 
   .spacer {
-    height: 200vh;
+    height: 100vh;
   }   
 
   .mainContainer { 
@@ -84,6 +82,8 @@
   }
 
   .navBar { 
+    position: sticky;
+    top:0; 
     font-family: 'digital';
     width: 100vw; 
     padding: 10px;
@@ -182,7 +182,6 @@
   }
 
   .canvasSection { 
-    position: relative;
     height: 400vh;
     width: 100vw;
   }

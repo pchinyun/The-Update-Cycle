@@ -2,6 +2,8 @@
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Lenis from 'lenis'; 
+import 'lenis/dist/lenis.css'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -9,10 +11,10 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".titleAnimation span", {
   scrollTrigger: {
     trigger: ".intro",
-    start: "top top",
-    end: "bottom bottom",
+    start: "50% 80%",
+    end: "50% 45%",
     scrub: true,
-    markers: true,
+    markers: false,
   },
   opacity: 1,
   y: 0,
@@ -25,4 +27,12 @@ gsap.to(".titleAnimation span", {
 });
 
 
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
 
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+
+});
