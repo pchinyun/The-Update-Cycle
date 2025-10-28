@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="./index.html"><button class="logo"><img src="./icon/logo.png" alt="" width="50px"></button></a>
+    
+
+    <div class="mainContainer">
+
+        <div class="infoContainer">
+            <div class="navBar">
+                <div class="categories">
+                    <div><a href="./input.html">Input</a></div>
+                    <div><a href="./overwrite.html">Overwrite</a></div>
+                    <div class="selected"> 
+                        <a href="./reroute.html">Reroute</a>
+                        <div class="orangeDot"></div>
+                    </div>
+                </div>
+        
+                <div class="title">
+                    <h1>Re:Code</h1>
+                </div>
+            </div>
+        
+        
+            <div class="detailContainer">
+                <div class="productName">
+                    <h2>RE:CODE01</h2>
+                    <img src="./icon/mask.png" alt="" width="25%">
+                    <p>$399.49</p>
+                </div>
+        
+                <div class="productDetail">
+                    <h3>Low in Stock</h3>
+                    <div class="productType">
+                        <h3>Micro-sensor array display</h3>
+                        <p>Pixel perfect binary translation</p>
+                    </div>
+                    <div class="productCompatibility">
+                        <h3>Vocal Encryption</h3>
+                        <p>Universal neural input</p>
+                    </div>
+                </div>
+        
+                <div class="productDescription">
+                    <p>Designed to translate emotional expression into binary output, RE:CODE01 redefines communication for the post-verbal age. Each gesture is rendered into data streams for seamless interaction between human and system. No words. No ambiguity. Pure transmission.</p>
+                </div>
+            </div>
+        </div>
+    
+        <section class="canvasSection">
+            <canvas class="webgl"></canvas>
+        </section>
+    </div>
+
+    <div class="specContainer">
+        <div class="spec">
+            <div class="spec1">
+                <h3>Use direciton</h2>
+                <p>Insert tip gentle into port</p>
+                <p>Press thumb firmly onto base for fingerprint recognition</p>
+                <p>Warning: Not made for users v2.6 and below</p>
+            </div>
+            <div class="spec2">
+                <h3>Whats included</h2>
+                <p> Infuse.xe Biometric syringe</p>
+                <p> Replacable tips - v37.4-XH3 x3</p> 
+                <p> DNA restarter </p>
+                <p> Batters not included </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="images">
+        <div class="productImg">
+            <img src="./img/mask 1.jpg" alt="">
+            <img src="./img/mask 2.jpg" alt="">
+        </div>
+        
+        <div class="posterImg">
+            <!-- <img src="./img/overwrite poster 1.png" alt="">
+            <img src="./img/overwrite poster 2.png" alt=""> -->
+        </div>
+    </div>
+
+
+    <div class="cta"><a href="./cta.html">Buy Now</a></div>
+
+    <!-- script -->
+    <script type="module" src="./script.js"></script>
+    <script type="module">
+        // overwrite-scene.js
+        import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+        import gsap from 'gsap';
+        import ScrollTrigger from 'gsap/ScrollTrigger';
+        import { scene, camera } from './script.js';
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ✅ Load model
+        const loader = new GLTFLoader();
+        let model = null;
+
+        loader.load('./models/mask.glb', (glb) => {
+        model = glb.scene;
+        model.position.set(0, -0.5, 1);
+        model.scale.set(0.5, 0.5, 0.5);
+        scene.add(model);
+
+        // ✅ Scroll animation timeline
+        const tl = gsap.timeline({
+            scrollTrigger: {
+            trigger: ".canvasSection",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true
+            }
+        });
+
+        tl.to(camera.position, { x:1, z:3, y:-0  });
+        tl.to(camera.position, { x:-1, z:3, y:-0  });
+        tl.to(camera.position, { x:0, z:4, y: 2  });
+        
+        });
+    </script>
+</body>
+</html>

@@ -8,22 +8,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="./index.html"><button>home</button></a>
+    <a href="./index.html"><button class="logo"><img src="./icon/logo.png" alt="" width="50px"></button></a>
     
 
     <div class="mainContainer">
 
         <div class="infoContainer">
-            <div class="header">
+            <div class="navBar">
                 <div class="categories">
-                    <h2>Input</h2>
-                    <h2>Output</h2>
-                    <h2 class="selected">Overwrite</h2>
-                    <h2>Reroute</h2>
+                    <div><a href="./input.html">Input</a></div>
+
+                    <div class="selected"> 
+                        <a href="./overwrite.html">Overwrite</a>
+                        <div class="orangeDot"></div>
+                    </div>
+
+                    <div> <a href="./reroute.html">Reroute</a></div>
                 </div>
         
                 <div class="title">
-                    <h1>NextByte</h1>
+                    <h1>Erase</h1>
                 </div>
             </div>
         
@@ -31,15 +35,15 @@
             <div class="detailContainer">
                 <div class="productName">
                     <h2>Erase.xe</h2>
-                    <img src="./icon/syringe.png" alt="">
-                    <p>$50.99</p>
+                    <img src="./icon/tape.png" alt="" width="35%">
+                    <p>$189.00</p>
                 </div>
         
                 <div class="productDetail">
                     <h3>In Stock</h3>
                     <div class="productType">
-                        <h3>Lightning Tip</h3>
-                        <p>Extra fast charging</p>
+                        <h3>Precision Recalibration</h3>
+                        <p>Clean Slate Protocol</p>
                     </div>
                     <div class="productCompatibility">
                         <h3>Biometric Sync</h3>
@@ -48,7 +52,7 @@
                 </div>
         
                 <div class="productDescription">
-                    <p>Deliver pure voltage through the bloodstream. Engineered for seamless biometric sync, infuse.xe ensures your system stays charged, calibrated, and compliant. Designed for efficiency — powered by you.</p>
+                    <p>Redefine erasure. Designed for precision removal, Erase.xe eliminates residue at both surface and cellular level. Each swipe initiates a clean-slate protocol — restoring clarity, deleting trace. Perfection is no longer correction; it’s disappearance.</p>
                 </div>
             </div>
         </div>
@@ -56,12 +60,82 @@
         <section class="canvasSection">
             <canvas class="webgl"></canvas>
         </section>
+
     </div>
 
+    <div class="specContainer">
+        <div class="spec">
+            <div class="spec1">
+                <h3>Use direciton</h2>
+                <p>Insert tip gentle into port</p>
+                <p>Press thumb firmly onto base for fingerprint recognition</p>
+                <p>Warning: Not made for users v2.6 and below</p>
+            </div>
+            <div class="spec2">
+                <h3>Whats included</h2>
+                <p> Infuse.xe Biometric syringe</p>
+                <p> Replacable tips - v37.4-XH3 x3</p> 
+                <p> DNA restarter </p>
+                <p> Batters not included </p>
+            </div>
+        </div>
+    </div>
 
     <div class="images">
-        <img src="./img/syringe port on model 1.png" alt="">
+        <div class="productImg">
+            <img src="./img/tape 1.jpg" alt="">
+            <img src="./img/tape 2.jpg" alt="">
+            <img src="./img/tape 3.jpg" alt="">
+            <img src="./img/tape 4.jpg" alt="">
+        </div>
+        
+        <div class="posterImg">
+            <img src="./img/overwrite poster 1.png" alt="">
+            <img src="./img/overwrite poster 2.png" alt="">
+        </div>
     </div>
-    <script type="module" src="./script.js"></script>
+
+
+    <div class="cta"><a href="./cta.html">Buy Now</a></div>
+
+
+<!-- scripts -->
+    <script type="module" src="./script.js"></script>   
+    <script type="module">
+        // overwrite-scene.js
+        import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+        import gsap from 'gsap';
+        import ScrollTrigger from 'gsap/ScrollTrigger';
+        import { scene, camera } from './script.js';
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ✅ Load model
+        const loader = new GLTFLoader();
+        let model = null;
+
+        loader.load('./models/correction tape 2.glb', (glb) => {
+        model = glb.scene;
+        model.position.set(0, -1, 0);
+        model.scale.set(0.5, 0.5, 0.5);
+        scene.add(model);
+
+        // ✅ Scroll animation timeline
+        const tl = gsap.timeline({
+            scrollTrigger: {
+            trigger: ".canvasSection",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true
+            }
+        });
+
+        tl.to(camera.position, { x: -5, z: 2, y: 1 });
+        tl.to(camera.position, { x: -5, z: 0, y: 1 });
+        tl.to(camera.position, { x: 0, z: 3, y: -0.5 });
+        tl.to(camera.position, { x: 5, z: 3, y: -0.5 });
+        tl.to(camera.position, { x: 0, z: 5, y: -0.5 });
+        });
+    </script>
 </body>
 </html>
