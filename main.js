@@ -1,10 +1,9 @@
 //  website script
 
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import Lenis from 'lenis'; 
-import 'lenis/dist/lenis.css'
-
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,9 +22,7 @@ gsap.to(".titleAnimation span", {
     each: 0.2,
   },
   ease: "power2.out",
-
 });
-
 
 // Initialize Lenis
 const lenis = new Lenis({
@@ -33,6 +30,4 @@ const lenis = new Lenis({
 });
 
 // Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-
-});
+lenis.on("scroll", (e) => {});

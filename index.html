@@ -1,174 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Update Cycle</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a href="./index.html" class="logo"
+      ><button class="logo">
+        <img src="./icon/logo.png" width="60px" /></button
+    ></a>
+    <div class="navConst">
+      <a href="#productsNav" class="inlineFormat"
+        >Cart<img src="./icon/cart.png" width="20px"
+      /></a>
+      <a href="#productsNav"><img src="./icon/Avatar.png" width="25px" /></a>
+    </div>
 
-</head>
-<body>
-     <a href="./index.html" class="logo"><button class="logo"><img src="./icon/logo.png" alt="" width="40px"></button></a>
-
-     <section class="spacer"></section>   
-     <section class="intro">
-       <h1 class="titleAnimation">
-         <span>N</span><span>e</span><span>x</span><span>t</span>
-         <span>B</span><span>y</span><span>t</span><span>e</span>
-       </h1>
-     </section>
-   
-     <section class="spacer"></section>  
-
-     <!-- <div class="navBar">
-      <div class="categories">
-          <div> <a href="./input.html">Input</a></div>
-          <div> <a href="./overwrite.html">Overwrite</a></div>
-          <div> <a href="./reroute.html">Reroute</a></div>
+    <div class="sec1">
+      <div class="navBar">
+        <a href="#catalogue">View Catalogue</a>
       </div>
-    </div> -->
-  
-    <div class="mainContainer">
 
-      <div class="infoContainer">
-          <div class="navBar">
-              <div class="categories">
-                  <div class="selected"> 
-                      <a href="./input.html">Input</a>
-                      <div class="orangeDot"></div>
-                  </div>
-                  <div> <a href="./overwrite.html">Overwrite</a></div>
-                  <div> <a href="./reroute.html">Reroute</a></div>
-              </div>
-      
-              <div class="title">
-                  <h1>INFUSE</h1>
-              </div>
-          </div>
-      
-      
-          <div class="detailContainer">
-              <div class="productName">
-                  <h2>Infuse.iv</h2>
-                  <img src="./icon/syringe.png" alt="" width="50%">
-                  <p>$50.99</p>
-              </div>
-      
-              <div class="productDetail">
-                  <h3>In Stock</h3>
-                  <div class="productType">
-                      <h3>Lightning Tip</h3>
-                      <p>Extra fast charging</p>
-                  </div>
-                  <div class="productCompatibility">
-                      <h3>Biometric Sync</h3>
-                      <p>Compatible with v37.4-XH3 and above</p>
-                  </div>
-              </div>
-      
-              <div class="productDescription">
-                  <p>Deliver pure voltage through the bloodstream. Engineered for seamless biometric sync, infuse.xe ensures your system stays charged, calibrated, and compliant. Designed for efficiency — powered by you.</p>
-              </div>
-          </div>
-      </div>
-  
-      <section class="canvasSection">
-          <canvas class="webgl"></canvas>
+      <section class="spacer">
+        <div class="scrollAnimation"></div>
+        <h2 class="scrollText">Scroll</h2>
       </section>
-  </div>
 
+      <section class="intro">
+        <h1 class="titleAnimation">
+          <span>N</span><span>e</span><span>x</span><span>t</span> <span>B</span
+          ><span>y</span><span>t</span><span>e</span>
+        </h1>
+      </section>
 
-  <div class="specContainer">
-      <div class="spec">
-          <div class="spec1">
-              <h3>Use direciton</h2>
-              <p>Insert tip gently into port</p>
-              <p>Press thumb firmly onto base for fingerprint recognition</p>
-              <p>Warning: Not made for users v2.6 and below</p>
+      <section class="spacer">
+        <p>Data is your inexhaustable asset</p>
+      </section>
+    </div>
+
+    <div id="catalogue" class="sec2">
+      <div class="navBar">
+        <a href="./input.html">Input</a>
+        <a href="#productsNav">Output</a>
+        <a href="#productsNav">Reroute</a>
+      </div>
+
+      <div class="catalogue">
+        <div class="catCard">
+          <img src="./img/mask 1.jpg" alt="" />
+
+          <div class="catCardInfo">
+            <div class="catCardText">
+              <h3>Infuse.io</h3>
+              <p>Deliver pure voltage through the bloodstream</p>
+            </div>
+            <button><a href="">Buy</a></button>
           </div>
-          <div class="spec2">
-              <h3>Whats included</h2>
-              <p> Infuse.xe Biometric syringe</p>
-              <p> Replacable tips - v37.4-XH3 x3</p> 
-              <p> DNA restarter </p>
-              <p> Batters not included </p>
-          </div>
+        </div>
+
+        <!-- 
+        <div class="catCard">
+          <img src="./img/mask 1.jpg" alt="" />
+        </div>
+        <div class="catCard">
+          <img src="./img/mask 1.jpg" alt="" />
+        </div> -->
       </div>
-  </div>
-
-  <div class="images">
-      <div class="productImg">
-          <img src="./img/syringe 1.jpg" alt="">
-          <img src="./img/syringe 2.jpg" alt="">
-          <img src="./img/syringe 3.jpg" alt="">
-          <img src="./img/syringe 4.jpg" alt="">
-      </div>
-      
-      <div class="posterImg">
-          <img src="./img/syringe port on model 1.png" alt="">
-      </div>
-  </div>
-
-  <div class="cta"><a href="./cta.html">Buy Now</a></div>
-
-
-
-
-<!-- script  -->
-  <script type="module" src="./script.js"></script>
-  <script type="module">
-      // overwrite-scene.js
-      import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-      import gsap from 'gsap';
-      import ScrollTrigger from 'gsap/ScrollTrigger';
-      import { scene, camera } from './script.js';
-
-      gsap.registerPlugin(ScrollTrigger);
-
-      // ✅ Load model
-      const loader = new GLTFLoader();
-      let model = null;
-
-      loader.load('./models/syringe 4.glb', (glb) => {
-      model = glb.scene;
-      model.position.set(0, -0.3, 0);
-      model.scale.set(0.5, 0.5, 0.5);
-      scene.add(model); 
-
-  
-
-      // ✅ Scroll animation timeline
-      const tl = gsap.timeline({
-          scrollTrigger: {
-          trigger: ".canvasSection",
-          start: "top top",
-          end: "bottom bottom",
-          scrub: true, 
-          }
-      });
-
-      tl.to(camera.position, { x: 3, z: 3, y: 1 });
-      tl.to(camera.position, { x: 1, z: 2, y: 1 });
-      tl.to(camera.position, { x: -3, z: 2, y: 1 });
-      tl.to(camera.position, { x: 0, z: 4, y: 1 });
-      // tl.to(camera.position, { x: 0, z: 3, y: -0.5 });
-      // tl.to(camera.position, { x: 5, z: 3, y: -0.5 });
-      });
- 
-
-  </script>
-   
-   
-   <script type="module" src="./main.js"></script>  
-
-
-
-
-
-
-
-
-    
-</body>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

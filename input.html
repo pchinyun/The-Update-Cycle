@@ -23,12 +23,12 @@
                     <div> <a href="./overwrite.html">Overwrite</a></div>
                     <div> <a href="./reroute.html">Reroute</a></div>
                 </div>
-        
-                <div class="title">
-                    <h1>INFUSE</h1>
-                </div>
             </div>
-        
+
+            <div class="title">
+                <h1>INFUSE</h1>
+            </div>
+      
         
             <div class="detailContainer">
                 <div class="productName">
@@ -108,11 +108,11 @@
 
         gsap.registerPlugin(ScrollTrigger);
 
-        // ✅ Load model
+        // Load model
         const loader = new GLTFLoader();
         let model = null;
 
-        loader.load('./models/syringe 4.glb', (glb) => {
+        loader.load('./models/syringe 5.glb', (glb) => {
         model = glb.scene;
         model.position.set(0, -0.3, 0);
         model.scale.set(0.5, 0.5, 0.5);
@@ -120,7 +120,7 @@
 
     
 
-        // ✅ Scroll animation timeline
+        // Scroll animation timeline
         const tl = gsap.timeline({
             scrollTrigger: {
             trigger: ".canvasSection",

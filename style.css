@@ -1,277 +1,416 @@
-  @font-face {
-    font-family: 'haas';
-    src: url('./fonts/NeueHaasGrotDisp-45Light-Trial.otf');
-  }
+@font-face {
+  font-family: "haas";
+  src: url("./fonts/NeueHaasGrotDisp-45Light-Trial.otf");
+}
 
-  @font-face {
-    font-family: 'digital';
-    src: url('./fonts/Digital-Desolation-Plus.otf');
-  }
+@font-face {
+  font-family: "digital";
+  src: url("./fonts/Digital-Desolation-Plus.otf");
+}
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+}
 
-  * { 
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 12px;  
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  body { 
-    overflow-x: hidden;
-  }
+body {
+  overflow-x: hidden;
+  background-color: #ededed;
+}
 
+h1 {
+  font-family: "haas";
+}
 
-  h2 { 
-    font-size: 3rem;
-  }
+h2 {
+  font-size: 3rem;
+}
 
-  h3 {
-    font-size: 1.5rem;
-  }
+h3 {
+  font-size: 1.5rem;
+}
 
-  .logo { 
-    all: unset;
-    font-family: 'digital';
-    font-size: 2rem;
-    color: #ff3700;
-    text-decoration: none;
-    padding: 20px; 
-    cursor: pointer;
-    position: relative;
-  }
+/* landing page */
+.logo {
+  all: unset;
+  cursor: pointer;
+  padding: 15px;
+  position: fixed;
+  z-index: 2;
+}
 
+.navConst {
+  right: 0vw;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 30px;
+  position: fixed;
+  z-index: 2;
+}
 
-  .intro {
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.navConst a {
+  text-decoration: none;
+  font-family: "haas";
+  font-size: 1.5rem;
+  color: #979797;
+  padding: 30px;
+  padding-right: 60px;
+}
 
-  .titleAnimation {
-    font-size: 50vw;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    display: flex;
-    gap: 0.1em;
-    width: 90vw;
-    height: fit-content;
-    overflow-y: hidden;
-  }
+.sec1 {
+  position: relative;
+  height: fit-content;
+}
 
-  .titleAnimation span {
-    font-family: 'digital';
-    font-size: 50px;
+.navBar {
+  position: sticky;
+  top: 0;
+  font-family: "haas";
+  width: 100vw;
+  padding: 30px;
+  display: inline-flex;
+  justify-content: center;
+  gap: 15vw;
+  z-index: 1;
+  background-color: #ededed;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: #979797;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navBar a:hover {
+  color: #6a6a6a;
+}
+
+.inlineFormat {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.intro {
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleAnimation {
+  font-size: 50vw;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  gap: 0.1em;
+  width: 90vw;
+  height: fit-content;
+  overflow-y: hidden;
+}
+
+.titleAnimation span {
+  font-family: "digital";
+  font-size: 50px;
+  opacity: 0;
+  transform: translateY(80px);
+  filter: blur(10px);
+  color: #979797;
+  display: inline;
+}
+
+.spacer {
+  height: 100vh;
+  position: relative;
+  font-family: "haas";
+  color: #979797;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.scrollAnimation {
+  height: 150px;
+  width: 80px;
+  border: 2px solid #979797;
+  border-radius: 50px;
+  position: relative;
+}
+
+.scrollAnimation::before,
+.scrollAnimation::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid #979797;
+  height: 20px;
+  width: 20px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scrollAnimation 1.5s ease-in-out infinite;
+}
+
+.scrollAnimation::after {
+  top: 30%;
+  animation-delay: 0.3s;
+}
+
+@keyframes scrollAnimation {
+  0% {
     opacity: 0;
-    transform: translateY(80px);
-    filter: blur(10px);
-    color: #979797;
-    display: inline;
   }
 
-  .spacer {
-    height: 100vh;
-  }   
-
-  .mainContainer { 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: fit-content;
+  30% {
+    opacity: 1;
   }
 
-  .navBar { 
-    position: sticky;
-    top:0; 
-    font-family: 'digital';
-    width: 100vw; 
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1.5px solid #e3e3e3;
-    border-top: 1.5px solid #e3e3e3 ;
-    cursor: pointer;
+  60% {
+    opacity: 1;
   }
 
-  .navBar  a { 
-    text-decoration: none;
-    color: #e3e3e3;
+  100% {
+    opacity: 0;
+    top: 90%;
   }
+}
 
-  .navBar a:hover { 
-    color:#6a6a6a ;
+.scrollText {
+  background: linear-gradient(to left, #979797, #cdcdcd, #979797);
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  animation: scrollText 2.5s ease-in-out infinite;
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+@keyframes scrollText {
+  to {
+    background-position: -200%;
   }
+}
 
-  .categories { 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: #e3e3e3;
-  }
+.sec2 {
+  position: relative;
+  height: 100vh;
+}
 
-  .selected { 
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    gap: -10px;
-  }
+.catalogue {
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
 
-  .selected a { 
-    color:#6a6a6a ;
-  }
+.catCard {
+  font-family: "haas";
+  color: #979797;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .orangeDot { 
-    background-color: #ff3700;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    mix-blend-mode:darken;
-  }
+.catCard img {
+  width: 300px;
+  max-width: 100%;
+}
 
-  .title { 
-    height: 25vh;
-    width: 100vw;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-  } 
+.catCardInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
 
-  .title h1 { 
-    font-size: 10em;
-    color: #e3e3e3;
-  } 
+.catalogue button {
+  all: unset;
+}
 
+.catalogue a {
+  text-decoration: underline;
+  color: #424242;
+  font-size: 1.5rem;
+}
 
+/* product page */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+}
 
-  .detailContainer { 
-    width: 100vw;
-    height: fit-content;
-    margin: 3rem;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-family: 'haas';
-    color: #979797;
-  }
+.selected {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: -10px;
+}
 
-  .productName { 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+.selected a {
+  color: #6a6a6a;
+}
 
-  .productName p { 
-    font-size: 1.5rem;
-  }
+.orangeDot {
+  background-color: #ff3700;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  mix-blend-mode: darken;
+}
 
-  .productDetail { 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.title {
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.title h1 {
+  font-size: 10em;
+  color: #e3e3e3;
+}
 
-  .productDescription { 
-    width: 25vw;
-  }
+.detailContainer {
+  width: 100vw;
+  height: fit-content;
+  margin: 3rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "haas";
+  color: #979797;
+}
 
-  .productDescription p { 
-    font-size: 1.3rem;
-  }
+.productName {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  .canvasSection { 
-    height: 400vh;
-    width: 100vw;
-  }
+.productName p {
+  font-size: 1.5rem;
+}
 
-  canvas.webgl { 
-    position: sticky;
-    top: 0;
-    width: 100%; 
-    height: 100vh;
-    display: block;
-  }
+.productDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.productDescription {
+  width: 25vw;
+}
 
-  .spec { 
-    width: 100vw;
-    height: fit-content;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center; 
-    font-family: 'haas';
-    color: #979797; 
-  }
+.productDescription p {
+  font-size: 1.3rem;
+}
 
+.canvasSection {
+  height: 400vh;
+  width: 100vw;
+}
 
+canvas.webgl {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+}
 
-  .images { 
-    margin-top: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100vw;
-    padding: 10px;
-  }
+.spec {
+  width: 100vw;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "haas";
+  color: #979797;
+}
 
-  .images img { 
-    height: 90vh;
-    border-radius: 30px;
-  } 
+.images {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100vw;
+  padding: 10px;
+}
 
-  .productImg { 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:10px; 
-  }
+.images img {
+  height: 90vh;
+  border-radius: 30px;
+}
 
-  .posterImg { 
-    margin-top: 10rem;
-    display: flex;
-    flex-direction: row;
-  }
+.productImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 
-  .cta { 
-    margin-top: 6rem;
-    width:100vw;
-    border-radius: 5px;
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-  }
+.posterImg {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: row;
+}
 
-  .cta a { 
-    color: #e3e3e3;
-    background-color: #6a6a6a;
-    font-family: 'haas';
-    font-size: 1rem;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-  }
+.cta {
+  margin-top: 6rem;
+  width: 100vw;
+  border-radius: 5px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
 
-  .cta a:hover { 
-    color: #ff3700;
-  }
+.cta a {
+  color: #e3e3e3;
+  background-color: #6a6a6a;
+  font-family: "haas";
+  font-size: 1rem;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
 
+.cta a:hover {
+  color: #ff3700;
+}
 
-  .profile { 
-    padding: 20px;
-    font-family: 'haas';
-    color:#979797; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-  }
+.profile {
+  padding: 20px;
+  font-family: "haas";
+  color: #979797;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
