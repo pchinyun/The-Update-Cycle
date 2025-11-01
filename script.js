@@ -1,10 +1,10 @@
-// main 3d script 
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { HDRLoader } from 'three/examples/jsm/loaders/HDRLoader.js';
+// main 3d script
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { HDRLoader } from "three/examples/jsm/loaders/HDRLoader.js";
 
 // Canvas
-const canvas = document.querySelector('canvas.webgl');
+const canvas = document.querySelector("canvas.webgl");
 
 // Scene
 export const scene = new THREE.Scene();
@@ -12,7 +12,7 @@ export const scene = new THREE.Scene();
 // Sizes
 export const size = {
   width: window.innerWidth,
-  height: window.innerHeight
+  height: window.innerHeight,
 };
 
 // Camera
@@ -21,7 +21,11 @@ camera.position.z = 5;
 scene.add(camera);
 
 // Renderer
-export const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias:true });
+export const renderer = new THREE.WebGLRenderer({
+  canvas: canvas,
+  alpha: true,
+  antialias: true,
+});
 renderer.setSize(size.width, size.height);
 renderer.render(scene, camera);
 
@@ -31,13 +35,14 @@ controls.enableZoom = false;
 
 // HDR environment loader
 const hdrLoader = new HDRLoader();
-hdrLoader.load('./environmentMaps/Cyclorama Hard Light 2K.hdr', (environmentMap) => {
+hdrLoader.load("./environmentMaps/studio.hdr", (environmentMap) => {
   environmentMap.mapping = THREE.EquirectangularReflectionMapping;
   scene.environment = environmentMap;
+  scene.environmentIntensity = 0.9;
 });
 
 // Handle resize
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   size.width = window.innerWidth;
   size.height = window.innerHeight;
 
@@ -45,7 +50,7 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
 
   renderer.setSize(size.width, size.height);
-  renderer.sortObjects = true; 
+  renderer.sortObjects = true;
 });
 
 // Animation loop (shared render tick)
