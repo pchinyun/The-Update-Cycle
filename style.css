@@ -361,7 +361,7 @@ canvas.webgl {
 }
 
 .images img {
-  height: 90vh;
+  height: 100vh;
   border-radius: 30px;
 }
 
@@ -370,13 +370,7 @@ canvas.webgl {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-
-.posterImg {
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: row;
+  gap: 30px;
 }
 
 .cta {
