@@ -41,6 +41,10 @@ h3 {
   font-size: 3rem;
 }
 
+strong {
+  color: #424242;
+}
+
 /* landing page */
 .logo {
   all: unset;
@@ -403,6 +407,18 @@ canvas.webgl {
   bottom: 20%;
   left: 70%;
 }
+
+.text3 {
+  position: fixed;
+  top: 25%;
+  left: 10%;
+}
+
+.text4 {
+  position: fixed;
+  top: 75%;
+  right: 10%;
+}
 .textOverlay h2 {
   font-family: "haas";
   font-size: 2rem;
@@ -419,6 +435,20 @@ canvas.webgl {
   flex-direction: column;
 }
 
+.blurb {
+  padding: 10vw 20vw;
+}
+
+.blurb p {
+  font-family: "haas";
+  font-size: 3rem;
+  color: #979797;
+}
+
+.blurb span {
+  font-size: 3rem;
+}
+
 .spec {
   width: 100vw;
   height: fit-content;
@@ -429,6 +459,10 @@ canvas.webgl {
   align-items: center;
   font-family: "haas";
   color: #979797;
+}
+
+.spec1 {
+  width: 30vw;
 }
 
 .useCase {
