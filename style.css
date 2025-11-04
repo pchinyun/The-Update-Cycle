@@ -108,20 +108,22 @@ h3 {
 
 .titleAnimation {
   font-size: 50vw;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   display: flex;
   gap: 0.1em;
-  width: 90vw;
+  width: 100vw;
   height: fit-content;
-  overflow-y: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .titleAnimation span {
   font-family: "digital";
-  font-size: 50px;
+  font-size: 60px;
   opacity: 0;
-  transform: translateY(80px);
   filter: blur(10px);
   color: #979797;
   display: inline;
@@ -137,6 +139,10 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 50px;
+}
+
+.spacer p {
+  font-size: 3rem;
 }
 
 .scrollAnimation {
@@ -213,18 +219,35 @@ h3 {
   padding: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   gap: 20px;
 }
 
 .catCard {
   font-family: "haas";
-  color: #979797;
+  color: #898989;
+  width: 25vw;
+  height: fit-content;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: 0.1s ease-in-out;
+}
+
+.catCard h3 {
+  color: #424242;
+}
+
+.catCard em {
+  color: #424242;
+}
+
+.DP {
+  cursor: pointer;
+  border-radius: 15px;
 }
 
 .catCard img {
@@ -233,13 +256,15 @@ h3 {
 }
 
 .catCardInfo {
+  width: 100%;
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
-.catalogue button {
-  all: unset;
+.catCard:hover {
+  border: 1px solid #979797;
+  border-radius: 15px;
 }
 
 .catalogue a {
