@@ -1,18 +1,23 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: "./", // ✅ use relative paths so assets resolve correctly on Vercel
+  base: "./", // Use relative paths so assets load correctly on Vercel
   build: {
-    outDir: "dist", // ✅ Vercel will serve from this folder
-  },
-  server: {
-    open: true, // optional: auto-open browser when running locally
+    outDir: "dist", // Build output folder
+    rollupOptions: {
+      input: {
+        // Declare all HTML pages here
+        main: resolve(__dirname, "index.html"),
+        input: resolve(__dirname, "input.html"),
+        page2: resolve(__dirname, "overwrite.html"),
+        page3: resolve(__dirname, "reroute.html"),
+      },
+    },
   },
   resolve: {
     alias: {
-      // ✅ optional convenience: so you can use '@/path' instead of long relative imports
-      "@": "/src",
+      "@": "/src", // Optional: lets you import from "@/..." instead of relative paths
     },
   },
 });
