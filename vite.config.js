@@ -12,6 +12,7 @@ export default defineConfig({
         input: resolve(__dirname, "input.html"),
         page2: resolve(__dirname, "overwrite.html"),
         page3: resolve(__dirname, "reroute.html"),
+        profile: resolve(__dirname, "cta.html"),
       },
     },
   },
