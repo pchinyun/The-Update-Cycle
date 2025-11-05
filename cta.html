@@ -1,36 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CTA</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <a href="./index.html"><button class="logo"><img src="./icon/logo.png" alt="" width="50px"></button></a>
-   
-    <div class="infoContainer">
-        <div class="navBar">
-            <div class="categories">
-                <div><a href="./input.html">Input</a></div>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a href="./index.html" class="logo"
+      ><button class="logo">
+        <img src="./icon/logo.png" width="60px" /></button
+    ></a>
+    <div class="navConst">
+      <a href="#productsNav" class="inlineFormat"
+        >Cart<img src="./icon/cart.png" width="20px"
+      /></a>
+      <a href="./cta.html"><img src="./icon/Avatar.png" width="25px" /></a>
+    </div>
+    <div class="navContainer">
+      <div class="navBar">
+        <a href="./input.html">Infuse</a>
+        <a href="./overwrite.html">Erase</a>
+        <a href="./reroute.html">Recode</a>
+      </div>
+    </div>
 
-               <div><a href="./overwrite.html">Overwrite</a></div>
+    <div class="title"><h1>Profile</h1></div>
 
-                <div> <a href="./reroute.html">Reroute</a></div>
-            </div>
-    
-            <div class="title">
-                <h1>Your Profile</h1>
-            </div>
+    <div class="profileContainer">
+      <div class="profileUpper">
+        <div class="profileLeft">
+          <h1>Your System Status</h1>
+          <div class="systemStatus">
+            <p id="exclaimIcon">!</p>
+            <h2>v2.6 HXP 0.4</h2>
+          </div>
+          <p>Minimum class required v2.9 *</p>
         </div>
+        <div class="profileRight">
+          <div class="info-item">
+            <p class="label">Name</p>
+            <p class="value">Exon. L</p>
+          </div>
+          <div class="info-item">
+            <p class="label">Serial ID</p>
+            <p class="value">987305A</p>
+          </div>
 
-        <div class="profile">
-            <img src="./img/Profile.png" alt="" width="200px">
-            <p>Name Surname</p>
+          <div class="info-item">
+            <p class="label">Gender</p>
+            <p class="value">Male</p>
+          </div>
+          <div class="info-item">
+            <p class="label">Height</p>
+            <p class="value">178cm</p>
+          </div>
+
+          <div class="info-item">
+            <p class="label">Blood Type</p>
+            <p class="value">A-</p>
+          </div>
+          <div class="info-item">
+            <p class="label">DNA</p>
+            <p class="value">G645-ixSd</p>
+          </div>
+
+          <div class="info-item">
+            <p class="label">Date of Birth</p>
+            <p class="value">1 Jan 2057</p>
+          </div>
+          <div class="info-item">
+            <p class="label">Date of First Update</p>
+            <p class="value">1 Oct 2057</p>
+          </div>
         </div>
+      </div>
 
-    
-      
-</body>
+      <div class="profileLower">
+        <p>You are behind on 7 updates*</p>
+        <button onclick="updateFail()" class="updateBtn">Update Now</button>
+      </div>
+    </div>
+
+    <script>
+      function updateFail() {
+        alert("You are too far behind");
+      }
+    </script>
+  </body>
 </html>
