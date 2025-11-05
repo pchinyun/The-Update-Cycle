@@ -1,5 +1,5 @@
 // main 3d script
-import * as THREE from "three";
+import * as THREE from "./three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { HDRLoader } from "three/examples/jsm/loaders/HDRLoader.js";
 
