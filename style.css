@@ -308,7 +308,7 @@ strong {
   position: relative;
 }
 
-.selected {
+/* .selected {
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -317,6 +317,10 @@ strong {
 
 .selected a {
   color: #6a6a6a;
+} */
+
+.selected {
+  display: inline-flex;
 }
 
 .orangeDot {
@@ -419,6 +423,19 @@ canvas.webgl {
   top: 75%;
   right: 10%;
 }
+
+.text5 {
+  position: fixed;
+  top: 50%;
+  left: 10%;
+}
+
+.text6 {
+  position: fixed;
+  top: 20%;
+  right: 20%;
+}
+
 .textOverlay h2 {
   font-family: "haas";
   font-size: 2rem;
