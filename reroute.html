@@ -7,14 +7,6 @@
     <title>RECODE.01</title>
     <link rel="icon" type="image/x-icon" href="/icon/favicon.png" />
     <link rel="stylesheet" href="style.css" />
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "./three/build/three.module.js",
-          "three/addons/": "./three/examples/jsm/"
-        }
-      }
-    </script>
   </head>
   <body>
     <a href="./index.html" class="logo"
@@ -147,9 +139,9 @@
     <script type="module" src="./script.js"></script>
     <script type="module">
       // overwrite-scene.js
-      import { GLTFLoader } from "./three/examples/jsm/loaders/GLTFLoader.js";
+      import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
       import gsap from "gsap";
-      import ScrollTrigger from "./gsap/ScrollTrigger.js";
+      import ScrollTrigger from "gsap/ScrollTrigger.js";
       import { scene, camera } from "./script.js";
 
       gsap.registerPlugin(ScrollTrigger);
