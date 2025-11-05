@@ -1,7 +1,7 @@
 //  website script
 
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/ScrollTrigger.js";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 
