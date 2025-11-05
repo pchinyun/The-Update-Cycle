@@ -10,7 +10,8 @@
     <script type="importmap">
       {
         "imports": {
-          "three": "./three/build/three.module.js"
+          "three": "./three/build/three.module.js",
+          "three/addons/": "./three/examples/jsm/"
         }
       }
     </script>
@@ -191,7 +192,7 @@
     <script type="module">
       // overwrite-scene.js
       import { GLTFLoader } from "./three/examples/jsm/loaders/GLTFLoader.js";
-      import gsap from "./gsap.js";
+      import gsap from "gsap";
       import ScrollTrigger from "./gsap/ScrollTrigger.js";
       import { scene, camera } from "./script.js";
 
