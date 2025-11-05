@@ -35,7 +35,7 @@ controls.enableZoom = false;
 
 // HDR environment loader
 const hdrLoader = new HDRLoader();
-hdrLoader.load("./environmentMaps/studio.hdr", (environmentMap) => {
+hdrLoader.load("/environmentMaps/studio.hdr", (environmentMap) => {
   environmentMap.mapping = THREE.EquirectangularReflectionMapping;
   scene.environment = environmentMap;
   scene.environmentIntensity = 0.9;
