@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RECODE.01</title>
+    <link rel="icon" type="image/x-icon" href="/icon/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="./index.html" class="logo"
+      ><button class="logo">
+        <img src="./icon/logo.png" width="60px" /></button
+    ></a>
+    <div class="navConst">
+      <a href="#productsNav" class="inlineFormat"
+        >Cart<img src="./icon/cart.png" width="20px"
+      /></a>
+      <a href="#productsNav"><img src="./icon/Avatar.png" width="25px" /></a>
+    </div>
+    <div class="navContainer">
+      <div class="navBar">
+        <a href="./input.html">Infuse</a>
+        <a href="./overwrite.html">Erase</a>
+        <div class="selected">
+          <a href="./reroute.html">Recode</a>
+          <div class="orangeDot"></div>
+        </div>
+        <a href="" class="cta">Buy</a>
+      </div>
+    </div>
+
+    <div class="mainContainer">
+      <div class="infoContainer">
+        <div class="title">
+          <h1>RECODE</h1>
+        </div>
+
+        <div class="detailContainer">
+          <div class="productName">
+            <h2>RECODE.01</h2>
+            <img src="./icon/mask.png" alt="" width="25%" />
+            <p>$399.49</p>
+          </div>
+
+          <div class="productDetail">
+            <h3>Low in Stock</h3>
+            <div class="productType">
+              <h3>Micro-sensor array display</h3>
+              <p>Pixel perfect binary translation</p>
+            </div>
+            <div class="productCompatibility">
+              <h3>Vocal Encryption</h3>
+              <p>Universal neural input</p>
+            </div>
+          </div>
+
+          <div class="productDescription">
+            <p>
+              Designed to translate emotional expression into binary output,
+              RECODE.01 redefines communication. Each gesture is rendered into
+              data streams for seamless interaction between human and system. No
+              words. No ambiguity. Pure transmission.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="canvasSection">
+        <canvas class="webgl"></canvas>
+        <div class="textOverlay">
+          <h2 class="text5">Neural-responsive mesh</h2>
+          <h2 class="text6">Adaptive translation core</h2>
+        </div>
+      </section>
+    </div>
+
+    <div class="specContainer">
+      <div class="blurb">
+        <p>
+          Whether you speak in emotion or in data,
+          <span class="scrollText">each breath</span> is analyzed,
+          <span class="scrollText">each syllable</span> encoded,
+          <span class="scrollText">each thought</span> transmitted with
+          precision
+        </p>
+      </div>
+      <div class="spec">
+        <div class="spec1">
+          <h3>Use Direction</h3>
+          <p>1. Position mask gently in front of face.</p>
+          <p>2. Allow 2 seconds for adaptive calibration to facial contours.</p>
+          <p>3. Face a biotech-approved interface.</p>
+          <p>4. Articulate prompt clearly.</p>
+          <p>5. Haptic vibration confirms system synchronization.</p>
+          <p><strong>Warning: Fatal for users v3.0LX7 and below.</strong></p>
+        </div>
+        <div class="spec2">
+          <h3>What's included</h3>
+          <p>RECODE.01 Adaptive Voice Mask</p>
+          <p>Replaceable nano-filter sheets – v8.2-LM2 x5</p>
+          <p>Charging cradle and neural calibration cable</p>
+          <p>User synchronisation manual</p>
+        </div>
+      </div>
+      <div class="useCase">
+        <img src="./img/recodeUseCase.png" alt="" width="500px" />
+      </div>
+      <div class="images">
+        <div class="productImg">
+          <img src="./img/website/Mask 1.png" alt="" />
+          <img src="./img/website/Mask 2.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="otherProducts">
+      <h1>Shop other products</h1>
+      <div class="productImages">
+        <a href="./input.html">
+          <img src="./img/Infuse.png" alt="" width="200px" />
+        </a>
+        <a href="./overwrite.html">
+          <img src="./img/Erase.png" alt="" width="200px" />
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Copyright ©️ 2025 CY Inc. All rights reserved.</p>
+      <p>
+        Privacy Policy | Terms of Use | Sales and Refunds | Legal | Site Map
+      </p>
+      <p>Australia</p>
+    </div>
+
+    <!-- script -->
+    <script type="module" src="./script.js"></script>
+    <script type="module">
+      // overwrite-scene.js
+      import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+      import gsap from "gsap";
+      import ScrollTrigger from "gsap/ScrollTrigger.js";
+      import { scene, camera } from "./script.js";
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      // ✅ Load model
+      const loader = new GLTFLoader();
+      let model = null;
+
+      loader.load("./models/mask 4.glb", (glb) => {
+        model = glb.scene;
+        model.position.set(0, -0.5, 1);
+        model.scale.set(0.5, 0.5, 0.5);
+        scene.add(model);
+
+        // ✅ Scroll animation timeline
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".canvasSection",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+          },
+        });
+
+        tl.to(camera.position, { x: 1, z: 3, y: 0.5 });
+        tl.to(camera.position, { x: -1, z: 3, y: 0.5 })
+          .fromTo(
+            ".text5",
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 0.3 },
+            "<"
+          )
+          .to(".text5", { opacity: 0, duration: 0.3 });
+        tl.to(camera.position, { x: 0, z: 4, y: 2 })
+          .fromTo(
+            ".text6",
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 0.3 },
+            "<"
+          )
+          .to(".text6", { opacity: 0, duration: 0.3 });
+        tl.to(camera.position, { x: 0, z: 4, y: 0.5 });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERASE.XE</title>
+    <link rel="icon" type="image/x-icon" href="/icon/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="./index.html" class="logo"
+      ><button class="logo">
+        <img src="./icon/logo.png" width="60px" /></button
+    ></a>
+    <div class="navConst">
+      <a href="#productsNav" class="inlineFormat"
+        >Cart<img src="./icon/cart.png" width="20px"
+      /></a>
+      <a href="#productsNav"><img src="./icon/Avatar.png" width="25px" /></a>
+    </div>
+    <div class="navContainer">
+      <div class="navBar">
+        <a href="./input.html">Infuse</a>
+        <div class="selected">
+          <a href="./overwrite.html">Erase</a>
+          <div class="orangeDot"></div>
+        </div>
+        <a href="./reroute.html">Recode</a>
+        <a href="" class="cta">Buy</a>
+      </div>
+    </div>
+
+    <div class="mainContainer">
+      <div class="infoContainer">
+        <div class="title">
+          <h1>ERASE</h1>
+        </div>
+
+        <div class="detailContainer">
+          <div class="productName">
+            <h2>ERASE.XE</h2>
+            <img src="./icon/tape.png" alt="" width="35%" />
+            <p>$189.00</p>
+          </div>
+
+          <div class="productDetail">
+            <h3>In Stock</h3>
+            <div class="productType">
+              <h3>Precision Recalibration</h3>
+              <p>Clean Slate Protocol</p>
+            </div>
+            <div class="productCompatibility">
+              <h3>Biometric Sync</h3>
+              <p>Compatible with v37.4-XH3 and above</p>
+            </div>
+          </div>
+
+          <div class="productDescription">
+            <p>
+              Redefine erasure. Designed for precision removal, ERASE.XE
+              eliminates residue at both surface and cellular level. Each swipe
+              initiates a clean-slate protocol — restoring clarity, deleting
+              trace. Perfection is no longer correction; it’s disappearance.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="canvasSection">
+        <canvas class="webgl"></canvas>
+        <div class="textOverlay">
+          <h2 class="text3">Vapour thin dermal diffusion</h2>
+          <h2 class="text4">Bio-sympathetic casing</h2>
+        </div>
+      </section>
+    </div>
+
+    <div class="specContainer">
+      <div class="blurb">
+        <p>
+          Nano-reactive solution targets error at the molecular scale, removing
+          unwanted cells, sequences, or imprints with absolute precision. Gentle
+          on the surface, <span class="scrollText">ruthless beneath</span>.
+        </p>
+      </div>
+      <div class="spec">
+        <div class="spec1">
+          <h3>Use Direction</h3>
+          <p>1. Hold device firmly with steady control.</p>
+          <p>
+            2. <strong>For caloric control:</strong> Apply fluid tape evenly
+            over consumable surface. Allow to set for two minutes before intake.
+          </p>
+          <p>
+            3. <strong>For post-traumatic memory removal:</strong> Glide device
+            slowly across the scalp while recalling targeted memory fragments.
+            Allow the tape to set for a minimum of thirty minutes before
+            removing gently with a warm towel.
+          </p>
+          <p class="warning">
+            <strong
+              >Warning: Do not allow fluid to remain active for more than sixty
+              minutes. Fatal malfunction may occur.
+            </strong>
+          </p>
+        </div>
+        <div class="spec2">
+          <h3>What's included</h3>
+          <p>ERASE.XE Fluid Modulator</p>
+          <p>Bio-reactive fluid tape cartridges – v12.6-AQ5 x2</p>
+          <p>Precision applicator brush</p>
+          <p>Protective containment pouch</p>
+        </div>
+      </div>
+      <div class="useCase">
+        <img src="./img/eraseUseCase.png" alt="" width="500px" />
+      </div>
+      <div class="placement">
+        <div class="placementTitle">
+          <h1>
+            <span class="lighter">Universal correction fluid for </span>
+            multi domain recalibration
+          </h1>
+        </div>
+        <div class="placementIcons">
+          <div class="neck row">
+            <p>Metabolic correction in a single swipe</p>
+            <img src="./icon/eraseApple.png" alt="" />
+          </div>
+          <div class="arm row">
+            <p>Designed for gentle memory clearance</p>
+            <img src="./icon/eraseHead.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="images">
+        <div class="productImg">
+          <img src="./img/website/Erase 1.png" alt="" />
+          <img src="./img/website/Erase 2.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="otherProducts">
+      <h1>Shop other products</h1>
+      <div class="productImages">
+        <a href="./reroute.html">
+          <img src="./img/Recode.png" alt="" width="200px" />
+        </a>
+        <a href="./input.html">
+          <img src="./img/Infuse.png" alt="" width="200px" />
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Copyright ©️ 2025 CY Inc. All rights reserved.</p>
+      <p>
+        Privacy Policy | Terms of Use | Sales and Refunds | Legal | Site Map
+      </p>
+      <p>Australia</p>
+    </div>
+    <!-- scripts -->
+    <script type="module" src="./script.js"></script>
+    <script type="module">
+      // overwrite-scene.js
+      import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+      import gsap from "gsap";
+      import ScrollTrigger from "gsap/ScrollTrigger.js";
+      import { scene, camera } from "./script.js";
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const loader = new GLTFLoader();
+      let model = null;
+
+      loader.load("./models/correction tape 3.glb", (glb) => {
+        model = glb.scene;
+        model.position.set(0, -1, 0);
+        model.scale.set(0.5, 0.5, 0.5);
+        scene.add(model);
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".canvasSection",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+          },
+        });
+
+        tl.to(camera.position, { x: -5, z: 2, y: 1 });
+        tl.to(camera.position, { x: -5, z: 0, y: 1 })
+          .fromTo(
+            ".text3",
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 0.3 },
+            "<"
+          )
+          .to(".text3", { opacity: 0, duration: 0.3 });
+
+        tl.to(camera.position, { x: 0, z: 3, y: -0.5 });
+        tl.to(camera.position, { x: 5, z: 3, y: -0.5 })
+          .fromTo(
+            ".text4",
+            { opacity: 0, y: 50 },
+            { opacity: 1, y: 0, duration: 0.3 },
+            "<"
+          )
+          .to(".text4", { opacity: 0, duration: 0.3 });
+        tl.to(camera.position, { x: 0, z: 5, y: -0.5 });
+      });
+    </script>
+  </body>
+</html>
