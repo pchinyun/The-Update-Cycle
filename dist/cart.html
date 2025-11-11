@@ -2,13 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RECODE.01</title>
-    <link rel="icon" type="image/x-icon" href="./assets/favicon-BDNVRZRq.png" />
-    <script type="module" crossorigin src="./assets/page3-CB9AWvzz.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/ScrollTrigger-Ad5yvozK.js">
-    <link rel="modulepreload" crossorigin href="./assets/GLTFLoader-BAUCbqMR.js">
+    <title>Cart</title>
     <link rel="stylesheet" crossorigin href="./assets/style-DmfUSMrQ.css">
   </head>
   <body>
@@ -26,125 +21,16 @@
       <div class="navBar">
         <a href="./input.html">Infuse</a>
         <a href="./overwrite.html">Erase</a>
-        <div class="selected">
-          <a href="./reroute.html">Recode</a>
-          <div class="orangeDot"></div>
-        </div>
-        <button onclick="sendAlert()" class="cta">Buy</button>
+        <a href="./reroute.html">Recode</a>
       </div>
     </div>
 
-    <div class="mainContainer">
-      <div class="infoContainer">
-        <div class="title">
-          <h1>RECODE</h1>
-        </div>
-
-        <div class="detailContainer">
-          <div class="productName">
-            <h2>RECODE.01</h2>
-            <img src="./assets/mask-BNS_gAJ5.png" alt="" width="25%" />
-            <p>$399.49</p>
-          </div>
-
-          <div class="productDetail">
-            <h3>Low in Stock</h3>
-            <div class="productType">
-              <h3>Micro-sensor array display</h3>
-              <p>Pixel perfect binary translation</p>
-            </div>
-            <div class="productCompatibility">
-              <h3>Vocal Encryption</h3>
-              <p>Universal neural input</p>
-            </div>
-          </div>
-
-          <div class="productDescription">
-            <p>
-              Designed to translate emotional expression into binary output,
-              RECODE.01 redefines communication. Each gesture is rendered into
-              data streams for seamless interaction between human and system. No
-              words. No ambiguity. Pure transmission.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <section class="canvasSection">
-        <canvas class="webgl"></canvas>
-        <div class="textOverlay">
-          <h2 class="text5">Neural-responsive mesh</h2>
-          <h2 class="text6">Adaptive translation core</h2>
-        </div>
-      </section>
+    <div class="cart">
+      <img src="data:image/png;base64,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" alt="" />
+      <h1>Your Cart is Empty</h1>
+      <button>
+        <a href="./index.html#productsNav">Browse Catalogue</a>
+      </button>
     </div>
-
-    <div class="specContainer">
-      <div class="blurb">
-        <p>
-          Whether you speak in emotion or in data,
-          <span class="scrollText">each breath</span> is analyzed,
-          <span class="scrollText">each syllable</span> encoded,
-          <span class="scrollText">each thought</span> transmitted with
-          precision
-        </p>
-      </div>
-      <div class="spec">
-        <div class="spec1">
-          <h3>Use Direction</h3>
-          <p>1. Position mask gently in front of face.</p>
-          <p>2. Allow 2 seconds for adaptive calibration to facial contours.</p>
-          <p>3. Face a biotech-approved interface.</p>
-          <p>4. Articulate prompt clearly.</p>
-          <p>5. Haptic vibration confirms system synchronization.</p>
-          <p><strong>Warning: Fatal for users v3.0LX7 and below.</strong></p>
-        </div>
-        <div class="spec2">
-          <h3>What's included</h3>
-          <p>RECODE.01 Adaptive Voice Mask</p>
-          <p>Replaceable nano-filter sheets – v8.2-LM2 x5</p>
-          <p>Charging cradle and neural calibration cable</p>
-          <p>User synchronisation manual</p>
-        </div>
-      </div>
-      <div class="useCase">
-        <img src="./assets/recodeUseCase-CPD52f-A.png" alt="" width="500px" />
-      </div>
-      <div class="images">
-        <div class="productImg">
-          <img src="./assets/Mask%201-CYHn87H8.png" alt="" />
-          <img src="./assets/Mask%202-DWE0caZZ.png" alt="" />
-        </div>
-      </div>
-    </div>
-
-    <div class="otherProducts">
-      <h1>Shop other products</h1>
-      <div class="productImages">
-        <a href="./input.html">
-          <img src="./assets/Infuse-BdP6Cx0E.png" alt="" width="200px" />
-        </a>
-        <a href="./overwrite.html">
-          <img src="./assets/Erase-BM-Yd1YP.png" alt="" width="200px" />
-        </a>
-      </div>
-    </div>
-
-    <div class="footer">
-      <p>Copyright ©️ 2025 CY Inc. All rights reserved.</p>
-      <p>
-        Privacy Policy | Terms of Use | Sales and Refunds | Legal | Site Map
-      </p>
-      <p>Australia</p>
-    </div>
-
-    <!-- script -->
-    <script>
-      function sendAlert() {
-        alert(
-          "Alert: human-machine interface outdated.\nProceed immediately to User Profile for reconfiguration."
-        );
-      }
-    </script>
   </body>
 </html>

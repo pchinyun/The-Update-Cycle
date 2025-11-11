@@ -13,6 +13,7 @@ export default defineConfig({
         page2: resolve(__dirname, "overwrite.html"),
         page3: resolve(__dirname, "reroute.html"),
         profile: resolve(__dirname, "cta.html"),
+        cart: resolve(__dirname, "cart.html"),
       },
     },
   },
